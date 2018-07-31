@@ -11,32 +11,49 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+  <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+  <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+  <script>
+    $(function() {
+      AOS.init();
+    });
+
+    $(window).on('load', function() {
+      AOS.refresh();
+    });
+  </script>
+
   <style>
     body {
-      background-color: #f3f3f3;
+      background-color: #7f8fa6;
     }
 
-    .card-body{
-      box-shadow: 0px 2px 4px grey;
+    .card-body {
+      box-shadow: 0px 2px 4px #1b1e21bf;
       border-radius: 5px;
-    
+
+
 
     }
+
     .list-item {
       margin-top: 10px;
-      margin-bottom: 10px;
+
+      margin-bottom: 20px;
     }
 
     .phone-no {
       width: 100%;
       display: block;
       font-size: 20px;
-       background-image: linear-gradient(to right, #7474BF 0%, #348AC7 51%);
-       border:none;
+      background-image: linear-gradient(to right, #7474BF 0%, #348AC7 51%);
+      border: none;
     }
 
     .heading {
       margin-bottom: 21px;
+      color: #000000e6;
+      font-weight: bold;
     }
 
     .phone:link {
@@ -64,86 +81,111 @@
     }
 
     .subheading-mail {
-      padding: 10px;
+
       font-weight: bold;
       color: #000000de;
       font-size: 14px;
+      position: absolute;
+      top: 2px;
+      padding-left: 5px;
 
+    }
+
+    .mail-group {
+      position: relative;
     }
   </style>
 </head>
 
 <body>
+
   <div class="container">
-    <div class="card list-item">
+    <div class="card list-item" data-aos="fade-up" data-aos-offset="200" data-aos-delay="500" data-aos-duration="10000" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false" data-aos-anchor-placement="top-center">
       <div class="card-body">
         <h5 class="heading">Exhibition Hotline </h5>
-        <button type="button" class="btn btn-primary  phone-no"><small><a href="tel:+917290049926" class="phone"> +91 7290049926 </a></small></button><br/>
-        <button type="button" class="btn btn-primary  phone-no"><small><a href="tel:+917290049929" class="phone"> +91 7290049929</a></small></button>
+        <hr/>
+        <button type="button" class="btn btn-primary  phone-no"><small><i class="fas fa-mobile-alt"></i><a href="tel:+917290049926" class="phone"> +91 7290049926 </a></small></button><br/>
+        <button type="button" class="btn btn-primary  phone-no"><small><i class="fas fa-mobile-alt"></i><a href="tel:+917290049929" class="phone"> +91 7290049929</a></small></button>
         <br/>
-
-        <i class="far fa-envelope email-logo"></i> <small class="phone"> <a href="mailto:exhibition@licenseindia.com" class="subheading-mail">exhibition@licenseindia.com</a></small>
-
+        <hr/>
+        <div class="mail-group" data-aos="fade-down">
+          <i class="far fa-envelope email-logo"></i>
+          <small class="phone"> <a href="mailto:exhibition@licenseindia.com" class="subheading-mail">exhibition@licenseindia.com</a></small>
+        </div>
 
       </div>
     </div>
 
-    <div class="card list-item">
+    <div class="card list-item" data-aos="fade-down">
       <div class="card-body">
         <h5 class="heading">  Conference Hotline </h5>
+        <hr/>
 
-        <button type="button" class="btn btn-primary phone-no"><small > <a href="tel:+917290049927" class="phone">+91 7290049927 </a></small></button><br/>
-
-
-        <i class="far fa-envelope email-logo"></i><small class="phone"> <a href="mailto:conference@licenseindia.com"  class="subheading-mail">conference@licenseindia.com </a></small>
-
+        <button type="button" class="btn btn-primary phone-no"><i class="fas fa-mobile-alt"></i><small > <a href="tel:+917290049927" class="phone">+91 7290049927 </a></small></button><br/>
+        <hr />
+        <div class="mail-group">
+          <i class="far fa-envelope email-logo"></i><small class="phone"> <a href="mailto:conference@licenseindia.com"  class="subheading-mail">conference@licenseindia.com </a></small>
+        </div>
       </div>
     </div>
 
 
-    <div class="card list-item">
+    <div class="card list-item" data-aos="fade-down">
       <div class="card-body">
         <h5 class="heading">    Masterclass Hotline </h5>
-        <button type="button" class="btn btn-primary  phone-no">   <small><a href="tel:+917290049926"  class="phone"> +91 7290049926</a></small></button><br/>
-
-        <i class="far fa-envelope email-logo"></i> <small class="subheading-mail"> <a href="mailto:masterclass@licenseindia.com"class="subheading-mail" >masterclass@licenseindia.com</a></small>
-
+        <hr/>
+        <button type="button" class="btn btn-primary  phone-no"> <i class="fas fa-mobile-alt"></i>  <small><a href="tel:+917290049926"  class="phone"> +91 7290049926</a></small></button><br/>
+        <hr/>
+        <div class="mail-group">
+          <i class="far fa-envelope email-logo"></i> <small class="subheading-mail"> <a href="mailto:masterclass@licenseindia.com"class="subheading-mail" >masterclass@licenseindia.com</a></small>
+        </div>
       </div>
     </div>
 
 
-    <div class="card list-item">
+    <div class="card list-item" data-aos="fade-down">
       <div class="card-body">
         <h5 class="heading">Award Hotline</h5>
-         Call Abhinav
-         <br/>
-         <br/>
-        <button type="button" class="btn btn-primary  phone-no"><small><a href="tel:+919313034080" class="phone"> +91 9313034080</a> </small></button>
-        <br/>
-        <i class="far fa-envelope email-logo"></i><small class="subheading-mail">  <a href="mailto:awards@franchiseindia.net" class="subheading-mail" > awards@franchiseindia.net</a></small> <br/>
-            <br/>
-         Call Akshat
-         <br/>
-          <br />
+        <hr/>
+        <br/> Call Abhinav
 
-        <button type="button" class="btn btn-primary  phone-no"><small> <a href="tel:+919999310139" class="phone" >+91 9999310139 </a></small></button>
         <br/>
-        <i class="far fa-envelope email-logo"></i><small class="subheading-mail"> <a href="mailto:awards@licenseindia.com"  class="subheading-mail">  awards@licenseindia.com</a></small> <br/>
+        <br/>
+        <button type="button" class="btn btn-primary  phone-no"><i class="fas fa-mobile-alt"></i><small><a href="tel:+919313034080" class="phone"> +91 9313034080</a> </small></button>
+        <br/>
+        <hr/>
+        <div class="mail-group">
+          <i class="far fa-envelope email-logo"></i><small class="subheading-mail">  <a href="mailto:awards@franchiseindia.net" class="subheading-mail" > awards@franchiseindia.net</a></small> <br/>
+        </div>
+        <br/> Call Akshat
+        <br/>
+        <br />
 
+        <button type="button" class="btn btn-primary  phone-no"><i class="fas fa-mobile-alt"></i><small> <a href="tel:+919999310139" class="phone" >+91 9999310139 </a></small></button>
+        <br/>
+        <hr/>
+        <div class="mail-group">
+          <i class="far fa-envelope email-logo"></i><small class="subheading-mail"> <a href="mailto:awards@licenseindia.com"  class="subheading-mail">  awards@licenseindia.com</a></small> <br/>
+          <div class="mail-group">
+          </div>
+        </div>
       </div>
     </div>
 
-    <div class="card list-item">
+    <div class="card list-item" data-aos="fade-down">
       <div class="card-body">
         <h5 class="heading">Visitor Hotline</h5>
-        <br/>
-        Call Amrit
-        <br/>
-      </br/>
-        <button type="button" class="btn btn-primary  phone-no">    <small> <a href="tel:++917428599322" class="phone" >+91 7428599322 </a></small></button>
-        <br/>
-        <i class="far fa-envelope email-logo"></i><small class="subheading-mail">  <a href="mailto:kamrit@franchiseindia.net" class="subheading-mail">     kamrit@franchiseindia.net  </a></small>
+        <hr/>
+        <br/> Call Amrit
 
+        <br/>
+        <br/>
+        <button type="button" class="btn btn-primary  phone-no"> <i class="fas fa-mobile-alt"></i>   <small> <a href="tel:++917428599322" class="phone" >+91 7428599322 </a></small></button>
+        <br/>
+        <hr/>
+        <div class="mail-group">
+          <i class="far fa-envelope email-logo"></i><small class="subheading-mail">  <a href="mailto:kamrit@franchiseindia.net" class="subheading-mail">     kamrit@franchiseindia.net  </a></small>
+        </div>
       </div>
     </div>
   </div>
